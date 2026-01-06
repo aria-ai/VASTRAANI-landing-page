@@ -11,14 +11,11 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex flex-col items-start mb-4">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center mb-2 bg-burgundy-700 border-2 border-gold-500">
-                <span className="text-gold-400 text-2xl font-serif italic">
-                  V
-                </span>
-              </div>
-              <span className="font-serif text-xl font-semibold tracking-wider text-cream-50">
-                VASTRAANI
-              </span>
+              <img
+                src="/vastraani_logo.png"
+                alt="Vastraani"
+                className="h-16 w-auto mb-2"
+              />
             </div>
             <p className="text-cream-200 mb-4 font-serif italic">
               {footer.tagline}

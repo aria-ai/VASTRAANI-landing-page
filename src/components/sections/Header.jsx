@@ -39,38 +39,26 @@ const Header = () => {
       <Container>
         <nav className="flex items-center justify-between py-4 md:py-6">
           {/* Logo */}
-          <motion.div className="flex items-center" whileHover={{ scale: 1.2 }}>
+          <motion.div
+            className="flex items-center"
+            whileHover={{ scale: 1.02 }}
+          >
             <a
               href="#home"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection("#home");
               }}
-              className="flex flex-col items-center"
+              className="flex items-center"
             >
-              <div
+              <img
+                src="/vastraani_logo.png"
+                alt="Vastraani"
                 className={clsx(
-                  "w-24 h-24 md:w-24 md:h-24 rounded-full flex items-center justify-center mb-1",
-                  // "bg-burgundy-800 border-2 border-gold-500",
+                  "h-24 md:h-24 w-auto transition-opacity duration-300",
+                  scrolled ? "opacity-100" : "opacity-95",
                 )}
-              >
-                {/* <span className="text-gold-400 text-xl md:text-2xl font-serif italic">
-                  V
-                </span> */}
-                <img
-                  src="./vastraani_logo.png"
-                  alt="Our Story"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              {/* <span
-                className={clsx(
-                  "font-serif text-lg md:text-xl font-semibold tracking-wider",
-                  scrolled ? "text-burgundy-900" : "text-cream-50",
-                )}
-              >
-                VASTRAANI
-              </span> */}
+              />
             </a>
           </motion.div>
 

@@ -42,7 +42,7 @@ const Hero = () => {
         </motion.h1>
 
         <motion.p
-          className="text-xl md:text-2xl lg:text-3xl text-cream-100 font-serif italic mb-8 md:mb-12"
+          className="text-xl md:text-2xl lg:text-3xl text-gold-400 font-serif italic mb-4 md:mb-6"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -50,10 +50,19 @@ const Hero = () => {
           {hero.subtitle}
         </motion.p>
 
+        <motion.p
+          className="text-base md:text-lg lg:text-xl text-cream-100 font-sans mb-8 md:mb-12 max-w-2xl mx-auto"
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+        >
+          {hero.description}
+        </motion.p>
+
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
         >
           <Button
             variant="primary"

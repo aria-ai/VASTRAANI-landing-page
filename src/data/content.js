@@ -1,76 +1,92 @@
-// Template content for the landing page
-// All content is easily replaceable
+// Vastraani - Real content from client
+// Updated: January 2026
 
 export const navigation = [
   { name: "HOME", href: "#home" },
   { name: "COLLECTIONS", href: "#collections" },
-  { name: "HANDPAINTED", href: "#features" },
-  { name: "HERITAGE", href: "#about" },
   { name: "OUR STORY", href: "#about" },
+  { name: "WHY VASTRAANI", href: "#features" },
   { name: "CONTACT", href: "#footer" },
 ];
 
 export const hero = {
-  title: "TIMELESS WEAVES",
-  subtitle: "Where Tradition Becomes Adornment",
-  ctaText: "VIEW MORE",
+  title: "VASTRAANI",
+  subtitle: "From Divinity To Design",
+  description:
+    "Where Indian tradition meets modern elegance. Where every fabric breathes a story.",
+  ctaText: "EXPLORE THE COLLECTION",
   ctaAction: "#collections",
   backgroundImage: "/hero-bg-1.jpg",
 };
 
 export const collections = {
-  heading: "ETHEREAL THREADS",
-  subheading: "Where Tradition Meets Timeless Design",
+  heading: "THE VASTRAANI ESSENCE",
+  subheading: "Crafted with devotion. Designed with intention.",
+  description: "Every piece echoes emotion, artistry, and divine inspiration.",
   items: [
     {
       id: 1,
       image: "/collection-1.png",
-      title: "Royal Heritage",
-      description: "Exquisite silk sarees crafted with traditional zari work",
+      title: "Hand-Painted Sarees",
+      description:
+        "Wearable art crafted stroke by stroke. Each saree is a canvas of emotion.",
     },
     {
       id: 2,
       image: "/collection-2.png",
-      title: "Handpainted Elegance",
-      description: "Artisan hand-painted designs on premium fabrics",
+      title: "Festive & Wedding Edits",
+      description:
+        "Rich colours, delicate details, beautiful handwork — made for celebrations.",
     },
     {
       id: 3,
       image: "/collection-3.png",
-      title: "Timeless Collections",
-      description: "Curated selection of finest traditional textiles",
+      title: "Indo-Western Fusion",
+      description: "Modern silhouettes with an ethnic soul.",
     },
   ],
   ctaText: "SHOP NOW",
 };
 
 export const features = {
-  heading: "OUR CRAFTSMANSHIP",
-  subheading: "Celebrating the Art of Traditional Weaving",
+  heading: "WHY CHOOSE VASTRAANI?",
+  subheading: "Designed for the woman who loves tradition with a modern edge",
   items: [
     {
-      title: "Handwoven Excellence",
+      title: "Handcrafted with Precision",
       description:
-        "Each piece is meticulously handwoven by master artisans with decades of experience.",
-      icon: "🧵",
+        "Every piece is meticulously handcrafted with precision and passion, ensuring the highest quality.",
+      icon: "✨",
     },
     {
-      title: "Heritage Designs",
+      title: "Divine Heritage",
       description:
-        "Authentic patterns passed down through generations, preserving our rich cultural legacy.",
+        "Inspired by India's divine heritage and sacred traditions, woven into every design.",
+      icon: "🙏",
+    },
+    {
+      title: "Art-Driven Designs",
+      description:
+        "Art-driven designs, not mass-produced. Each piece tells a unique story.",
       icon: "🎨",
     },
     {
       title: "Premium Quality",
       description:
-        "Only the finest silk and natural materials are used in our timeless creations.",
-      icon: "✨",
+        "Soft fabrics and premium finishing. Made for comfort, confidence, and celebration.",
+      icon: "👗",
     },
     {
-      title: "Sustainable Craft",
+      title: "Ethical Production",
       description:
-        "Supporting traditional artisans and eco-friendly production methods.",
+        "Ethical, small-batch production supporting traditional artisans and sustainable practices.",
       icon: "🌿",
+    },
+    {
+      title: "Timeless Elegance",
+      description:
+        "Designed beyond trends — we create experiences that feel soulful, graceful, and timeless.",
+      icon: "💫",
     },
   ],
 };
@@ -79,62 +95,124 @@ export const testimonials = [
   {
     id: 1,
     quote:
-      "The craftsmanship is absolutely stunning. Every saree tells a story of heritage and elegance.",
-    author: "Customer Name",
-    role: "Fashion Enthusiast",
+      "I wore the hand-painted saree from Vastraani to my sister's wedding and I've never felt more beautiful. The compliments haven't stopped! Every stroke tells a story.",
+    author: "Priya Sharma",
+    role: "Wedding Guest, Mumbai",
   },
   {
     id: 2,
     quote:
-      "BRAND NAME has become my go-to for authentic, luxurious traditional wear. Simply exceptional.",
-    author: "Customer Name",
-    role: "Bride",
+      "The craftsmanship is absolutely divine. I bought a festive collection piece and the detailing is museum-quality. You can feel the devotion in every thread.",
+    author: "Ananya Kapoor",
+    role: "Art Collector, Delhi",
   },
   {
     id: 3,
     quote:
-      "The attention to detail and quality is unmatched. These are heirlooms in the making.",
-    author: "Customer Name",
-    role: "Collector",
+      "As a bride, I wanted something unique that honored tradition while feeling modern. Vastraani delivered exactly that. My wedding saree became a family heirloom the moment I wore it.",
+    author: "Meera Patel",
+    role: "Bride, Ahmedabad",
+  },
+  {
+    id: 4,
+    quote:
+      "I've been searching for ethical, artisan-made clothing for years. Vastraani is everything I hoped for — beautiful, sustainable, and deeply meaningful.",
+    author: "Kavya Reddy",
+    role: "Sustainable Fashion Advocate, Bangalore",
+  },
+  {
+    id: 5,
+    quote:
+      "The Indo-Western fusion collection is perfect for my lifestyle. I can wear it to work events and cultural celebrations. Versatile, elegant, and so comfortable!",
+    author: "Shreya Malhotra",
+    role: "Corporate Professional, Pune",
+  },
+  {
+    id: 6,
+    quote:
+      "I gifted my mother a Vastraani saree for her 60th birthday. She cried when she saw it. The blend of tradition and artistry touched her soul. Thank you for creating such magic.",
+    author: "Nandini Iyer",
+    role: "Daughter & Gift Giver, Chennai",
+  },
+  {
+    id: 7,
+    quote:
+      "Every piece from Vastraani feels like wearable poetry. I wore their festive collection to Diwali celebrations and felt like royalty. The fabric, the colors, the embroidery — perfection.",
+    author: "Aarohi Deshmukh",
+    role: "Festive Wear Enthusiast, Nagpur",
+  },
+  {
+    id: 8,
+    quote:
+      "As someone who appreciates art, I see Vastraani as more than clothing. These are canvases that move, breathe, and come alive when you wear them. Absolutely stunning.",
+    author: "Ishita Bose",
+    role: "Fine Arts Teacher, Kolkata",
+  },
+  {
+    id: 9,
+    quote:
+      "The quality is unmatched. I've bought from many brands, but nothing compares to the softness, finish, and attention to detail that Vastraani offers. Worth every penny.",
+    author: "Divya Menon",
+    role: "Fashion Enthusiast, Kochi",
   },
 ];
 
 export const about = {
   heading: "OUR STORY",
-  content: `BRAND NAME was founded with a vision to preserve and celebrate the rich heritage of traditional Indian textiles. 
+  content: `Vastraani began with a simple belief — that clothing is a form of devotion.
 
-For generations, master weavers have passed down their craft, creating exquisite sarees that embody timeless elegance and cultural significance. We work directly with these artisans, ensuring fair trade practices while bringing you the finest handwoven textiles.
+From hand-painted art to thoughtfully stitched silhouettes, our journey is rooted in culture, emotion, and gratitude. We honour Indian craftsmanship, celebrate feminine grace, and create designs that speak softly yet leave a lasting impression.
 
-Each piece in our collection represents hours of skilled craftsmanship, from the selection of the finest silk to the intricate weaving and embellishment. We believe that true luxury lies in authenticity, quality, and the stories woven into every thread.`,
+Every collection is inspired by life's deeper moments — Nature, memories, festivals, relationships, and the beauty within simplicity.
+
+Vastraani is not a brand. It is a feeling — of purity, pride, and personal expression.`,
+  mission:
+    "To bring divine-inspired, artistically crafted ethnic wear to modern women who value elegance, culture, and emotion.",
+  vision:
+    "To redefine Indian ethnic wear through soulful storytelling, responsible craftsmanship, and timeless design.",
   image: "/collection-1.png",
 };
 
 export const footer = {
-  tagline: "Weaving Traditions, Creating Heirlooms",
-  copyright: "© 2024 BRAND NAME. ALL RIGHTS RESERVED",
+  tagline: "Weaving Divinity, Creating Heirlooms",
+  aboutShort:
+    "Vastraani brings divinity, artistry, and elegance into every weave. Handcrafted ethnic wear that feels soulful, graceful, and timeless.",
+  copyright: "© 2026 VASTRAANI. ALL RIGHTS RESERVED",
+  contact: {
+    email: "support@vastraani.com",
+    phone: "+91 ————",
+    location: "Pune, Maharashtra",
+  },
   sections: [
     {
       title: "Quick Links",
       links: [
-        { name: "About Us", href: "#about" },
+        { name: "Our Story", href: "#about" },
         { name: "Collections", href: "#collections" },
-        { name: "Contact", href: "#footer" },
+        { name: "Why Vastraani", href: "#features" },
       ],
     },
     {
       title: "Customer Care",
       links: [
+        { name: "Contact Us", href: "#footer" },
         { name: "Shipping Info", href: "#" },
         { name: "Returns", href: "#" },
-        { name: "FAQs", href: "#" },
+      ],
+    },
+    {
+      title: "Legal",
+      links: [
+        { name: "Terms & Conditions", href: "/terms" },
+        { name: "Privacy Policy", href: "/terms#privacy" },
       ],
     },
   ],
 };
 
 export const socialLinks = [
-  { platform: "instagram", url: "https://instagram.com" },
-  { platform: "twitter", url: "https://twitter.com" },
-  { platform: "pinterest", url: "https://pinterest.com" },
-  { platform: "threads", url: "https://threads.net" },
+  { platform: "instagram", url: "https://instagram.com/vastraani" },
+  { platform: "twitter", url: "https://twitter.com/vastraani" },
+  { platform: "pinterest", url: "https://pinterest.com/vastraani" },
+  { platform: "threads", url: "https://threads.net/@vastraani" },
 ];

@@ -22,8 +22,11 @@ const Collections = () => {
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-burgundy-900 mb-4">
             {collections.heading}
           </h2>
-          <p className="text-lg md:text-xl text-burgundy-700 font-serif italic">
+          <p className="text-lg md:text-xl text-burgundy-700 font-serif italic mb-2">
             {collections.subheading}
+          </p>
+          <p className="text-base md:text-lg text-burgundy-600 max-w-2xl mx-auto">
+            {collections.description}
           </p>
         </motion.div>
 
