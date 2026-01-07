@@ -26,7 +26,7 @@ export const collections = {
   items: [
     {
       id: 1,
-      image: "/collection-1.png",
+      image: "/61.jpg",
       title: "Hand-Painted Sarees",
       description:
         "Wearable art crafted stroke by stroke. Each saree is a canvas of emotion.",
@@ -179,8 +179,9 @@ export const footer = {
     "Vastraani brings divinity, artistry, and elegance into every weave. Handcrafted ethnic wear that feels soulful, graceful, and timeless.",
   copyright: "© 2026 VASTRAANI. ALL RIGHTS RESERVED",
   contact: {
-    email: "support@vastraani.com",
-    phone: "+91 ————",
+    email: "d.vastraani@gmail.com",
+    phone: "+91-XXXXXXXXXX",
+    whatsapp: "91XXXXXXXXXX",
     location: "Pune, Maharashtra",
   },
   sections: [
@@ -210,9 +211,5 @@ export const footer = {
   ],
 };
 
-export const socialLinks = [
-  { platform: "instagram", url: "https://instagram.com/vastraani" },
-  { platform: "twitter", url: "https://twitter.com/vastraani" },
-  { platform: "pinterest", url: "https://pinterest.com/vastraani" },
-  { platform: "threads", url: "https://threads.net/@vastraani" },
-];
+// Import social links from centralized config
+export { socialLinks } from "../config/contact";
