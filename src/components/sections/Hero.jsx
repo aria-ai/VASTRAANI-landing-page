@@ -1,9 +1,35 @@
-import { motion } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useMotionTemplate,
+} from "framer-motion";
+import { useState, useEffect } from "react";
 import Button from "../ui/Button";
 import { hero } from "../../data/content";
-import { slideUp } from "../animations/variants";
 
 const Hero = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const { scrollY } = useScroll();
+
+  // Transform values for logo animation
+  // Logo moves from center to top-left header position
+  const logoScale = useTransform(scrollY, [0, 200], [1, 0.23]);
+  const logoXPercent = useTransform(scrollY, [0, 200], [0, -44]);
+  const logoYPercent = useTransform(scrollY, [0, 200], [0, -28]);
+
+  // Use motion template for calc values
+  const logoX = useMotionTemplate`calc(-50% + ${logoXPercent}vw)`;
+  const logoY = useMotionTemplate`calc(-50% + ${logoYPercent}vh)`;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const scrollToSection = (href) => {
     const element = document.querySelector(href);
     if (element) {
@@ -30,16 +56,25 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-burgundy-900/60 via-burgundy-900/40 to-burgundy-900/70" />
       </motion.div>
 
+      {/* Animated Logo - Transitions from center to header */}
+      <motion.img
+        src={hero.logo}
+        alt="Vastraani"
+        className="fixed top-1/3 left-1/2 z-50 h-40 md:h-48 lg:h-64 w-auto pointer-events-none"
+        style={{
+          scale: logoScale,
+          x: logoX,
+          y: logoY,
+        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      />
+
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <motion.h1
-          className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-cream-50 mb-4 md:mb-6"
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          {hero.title}
-        </motion.h1>
+        {/* Spacer for logo */}
+        <div className="h-40 md:h-48 lg:h-64 mb-6 md:mb-8" />
 
         <motion.p
           className="text-xl md:text-2xl lg:text-3xl text-gold-400 font-serif italic mb-4 md:mb-6"

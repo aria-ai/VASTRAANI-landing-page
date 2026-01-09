@@ -14,7 +14,7 @@ const Footer = () => {
               <img
                 src="/vastraani_logo.png"
                 alt="Vastraani"
-                className="h-16 w-auto mb-4"
+                className="h-16 w-auto"
               />
             </div>
             <p className="text-cream-200 mb-6 font-serif italic">

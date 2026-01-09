@@ -10,7 +10,7 @@ export const navigation = [
 ];
 
 export const hero = {
-  title: "VASTRAANI",
+  logo: "/vastraani_logo.png",
   subtitle: "From Divinity To Design",
   description:
     "Where Indian tradition meets modern elegance. Where every fabric breathes a story.",

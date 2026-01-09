@@ -38,30 +38,8 @@ const Header = () => {
     >
       <Container>
         <nav className="flex items-center justify-between py-4 md:py-6">
-          {/* Logo */}
-          <motion.div
-            className="flex items-center"
-            whileHover={{ scale: 1.02 }}
-          >
-            <a
-              href="#home"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("#home");
-              }}
-              className="flex items-center"
-            >
-              <img
-                src="/vastraani_logo.png"
-                alt="Vastraani"
-                className={clsx(
-                  "h-24 md:h-24 w-auto transition-opacity duration-300",
-                  scrolled ? "opacity-100" : "opacity-95",
-                )}
-              />
-            </a>
-          </motion.div>
-
+          {/* Logo removed - using Hero logo that transitions on scroll */}
+          <div className="w-14"></div> {/* Spacer for layout */}
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navigation.map((item) => (
@@ -84,7 +62,6 @@ const Header = () => {
               </motion.a>
             ))}
           </div>
-
           {/* Mobile Menu Button */}
           <button
             className={clsx(
