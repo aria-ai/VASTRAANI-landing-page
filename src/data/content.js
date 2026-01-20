@@ -1,6 +1,8 @@
 // Vastraani - Real content from client
 // Updated: January 2026
 
+import { pushpadharaCollections } from "./collections";
+
 export const navigation = [
   { name: "HOME", href: "#home" },
   { name: "COLLECTIONS", href: "#collections" },
@@ -20,32 +22,11 @@ export const hero = {
 };
 
 export const collections = {
-  heading: "THE VASTRAANI ESSENCE",
-  subheading: "Crafted with devotion. Designed with intention.",
-  description: "Every piece echoes emotion, artistry, and divine inspiration.",
-  items: [
-    {
-      id: 1,
-      image: "/61.jpg",
-      title: "Hand-Painted Sarees",
-      description:
-        "Wearable art crafted stroke by stroke. Each saree is a canvas of emotion.",
-    },
-    {
-      id: 2,
-      image: "/collection-2.png",
-      title: "Festive & Wedding Edits",
-      description:
-        "Rich colours, delicate details, beautiful handwork — made for celebrations.",
-    },
-    {
-      id: 3,
-      image: "/collection-3.png",
-      title: "Indo-Western Fusion",
-      description: "Modern silhouettes with an ethnic soul.",
-    },
-  ],
-  ctaText: "SHOP NOW",
+  heading: "THE PUSHPADHARA COLLECTION",
+  subheading: "First Bloom — Where every petal tells a story",
+  description:
+    "Hand-painted sarees on pure khadi cotton, celebrating colours, traditions, and timeless craftsmanship.",
+  items: pushpadharaCollections,
 };
 
 export const features = {
@@ -171,6 +152,63 @@ Vastraani is not a brand. It is a feeling — of purity, pride, and personal exp
   vision:
     "To redefine Indian ethnic wear through soulful storytelling, responsible craftsmanship, and timeless design.",
   image: "/collection-1.png",
+};
+
+export const brandPhilosophy = {
+  sectionTitle: "Understanding Our Sacred Journey",
+  subtitle: "Every thread tells a story, every pattern holds meaning",
+
+  cards: [
+    {
+      id: "brand-name",
+      icon: "दि",
+      title: "Brand Name Meaning",
+      heading: "दि VASTRAANI",
+      content: [
+        '"दि VASTRAANI" is a sacred union of identity, language, and philosophy.',
+        "\"दि\" is inspired by 'Divya/दिव्या' — the soul behind the brand.",
+        'It also means "THE" (दि), symbolizing uniqueness, authority, and singular presence.',
+        '"VASTRAANI" comes from Sanskrit, meaning clothing / garments, but in its truest sense, it represents that which adorns the body and nurtures the soul.',
+      ],
+      essence: "THE garments that carry divinity, intention, and art.",
+      tagline: "DIVINITY TO DESIGN",
+    },
+    {
+      id: "tagline",
+      icon: "॰",
+      title: "Tagline Meaning",
+      heading: "Divinity to Design",
+      content: [
+        "This tagline expresses the journey of each garment:",
+        "From spiritual inspiration → to thoughtful design → to wearable art.",
+      ],
+      pillars: [
+        { text: "Faith meets fabric", symbol: "🕉️" },
+        { text: "Culture meets creativity", symbol: "🎨" },
+        { text: "Soul meets silhouette", symbol: "✨" },
+      ],
+      essence:
+        "Each piece carries energy, intention, and story, not just style.",
+    },
+    {
+      id: "logo-symbol",
+      icon: "🔱",
+      title: "Logo Symbol Meaning",
+      heading: "TRINETRA (Shiva–Shakti)",
+      content: [
+        "The logo is inspired by the Trinetra — the third eye of Shiva–Shakti.",
+      ],
+      symbolizes: [
+        "Divine consciousness",
+        "Inner vision & awareness",
+        "Balance of masculine and feminine energy",
+        "Creation through cosmic harmony",
+      ],
+      essence: "True design is born when divinity meets creativity.",
+      footer:
+        'Every creation from "दि VASTRAANI" is not just stitched, but awakened — guided by intuition, rooted in tradition, and elevated through art.',
+    },
+  ],
 };
 
 export const footer = {
