@@ -211,6 +211,24 @@ export const brandPhilosophy = {
   ],
 };
 
+export const socialLinks = [
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/d_vastraani?",
+    icon: "instagram",
+  },
+  {
+    name: "Facebook",
+    url: "https://www.facebook.com/vastraani",
+    icon: "facebook",
+  },
+  {
+    name: "Pinterest",
+    url: "https://www.pinterest.com/vastraani",
+    icon: "pinterest",
+  },
+];
+
 export const footer = {
   tagline: "Weaving Divinity, Creating Heirlooms",
   aboutShort:
@@ -248,6 +266,3 @@ export const footer = {
     },
   ],
 };
-
-// Import social links from centralized config
-export { socialLinks } from "../config/contact";

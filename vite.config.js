@@ -9,6 +9,7 @@ export default defineConfig({
       "consultation-toe-sql-neighbor.trycloudflare.com",
       "comments-launch-unlimited-measures.trycloudflare.com",
       "sue-namely-structured-thehun.trycloudflare.com",
+      "affects-virtue-required-deluxe.trycloudflare.com",
     ],
   },
 });

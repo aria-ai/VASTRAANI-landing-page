@@ -2,8 +2,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback } from "react";
 import PriceDisplay from "./PriceDisplay";
 import InfoPanel from "./InfoPanel";
-import { contactLinks } from "../../config/contact";
 import { getCollectionImages } from "../../utils/imageUtils";
+import { createWhatsAppLink, openWhatsApp } from "../../utils/whatsapp";
 
 /**
  * Manual Image Carousel Component
@@ -156,9 +156,8 @@ const CollectionModal = ({
   if (!collection) return null;
 
   const handleWhatsAppClick = () => {
-    const message = `Hi! I'm interested in the ${collection.subtitle} saree from the Pushpadhara collection.`;
-    const whatsappUrl = `${contactLinks.whatsapp}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank");
+    const whatsappUrl = createWhatsAppLink(collection.enquiryMessage);
+    openWhatsApp(whatsappUrl);
   };
 
   return (

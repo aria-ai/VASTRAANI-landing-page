@@ -1,36 +1,31 @@
-// Contact Configuration
-// Single source of truth for all contact information and links
+/**
+ * Contact Configuration
+ * Centralized contact information for Vastraani
+ *
+ * WhatsApp link format: https://wa.me/<country_code><number>
+ * This format automatically handles:
+ * - Desktop: Opens WhatsApp Web
+ * - Mobile: Opens WhatsApp App
+ */
 
 export const contactInfo = {
-  email: "d.vastraani@gmail.com",
-  phone: "+91-XXXXXXXXXX",
-  whatsapp: "91XXXXXXXXXX", // Without + or - for wa.me link
-  location: "Pune, Maharashtra",
+  phone: "+919423307049",
+  phoneDisplay: "+91 94233 07049",
+  email: "contact@vastraani.com",
+  instagram: "@vastraani",
+  address: "India",
 };
 
-// Device-aware contact links
 export const contactLinks = {
-  email: `mailto:${contactInfo.email}`,
-  phone: `tel:${contactInfo.phone}`,
-  whatsapp: `https://wa.me/${contactInfo.whatsapp}`,
-};
+  // WhatsApp - automatically redirects to web or app based on device
+  whatsapp: "https://wa.me/919423307049",
 
-// Social media links
-export const socialMedia = {
-  instagram: {
-    name: "@d_vastraani",
-    url: "https://www.instagram.com/d_vastraani",
-  },
-  pinterest: {
-    name: "Vastraani",
-    url: "https://pin.it/6MOqHJ09c",
-  },
-};
+  // Phone - tel: protocol for click-to-call
+  phone: "tel:+919423307049",
 
-// Social links array for SocialIcons component
-export const socialLinks = [
-  { platform: "instagram", url: socialMedia.instagram.url },
-  { platform: "pinterest", url: socialMedia.pinterest.url },
-  { platform: "whatsapp", url: contactLinks.whatsapp },
-  { platform: "gmail", url: contactLinks.email },
-];
+  // Email - mailto: protocol
+  email: "mailto:contact@vastraani.com",
+
+  // Instagram
+  instagram: "https://instagram.com/vastraani",
+};

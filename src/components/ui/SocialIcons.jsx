@@ -28,7 +28,7 @@ const SocialIcons = ({
   return (
     <div className={clsx("flex gap-4", className)}>
       {links.map((link, index) => {
-        const Icon = ICON_MAP[link.platform.toLowerCase()];
+        const Icon = ICON_MAP[link.icon.toLowerCase()];
 
         if (!Icon) return null;
 

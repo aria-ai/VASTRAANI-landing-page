@@ -17,6 +17,14 @@ export const pushpadharaCollections = [
     ],
     price: 1799,
     imageCount: 5,
+    enquiryMessage: `Hi! I'm interested in the following saree from your Pushpadhara collection:
+
+*Sindoor Red*
+Pushpadhara — First Bloom
+
+Price: ₹1,799
+
+Could you please share more details?`,
   },
   {
     id: "warm-violet",
@@ -34,6 +42,14 @@ export const pushpadharaCollections = [
     ],
     price: 1799,
     imageCount: 5,
+    enquiryMessage: `Hi! I'm interested in the following saree from your Pushpadhara collection:
+
+*Warm Violet*
+A violet sky kissed by golden blooms
+
+Price: ₹1,799
+
+Could you please share more details?`,
   },
   {
     id: "royal-purple",
@@ -51,6 +67,14 @@ export const pushpadharaCollections = [
     ],
     price: 1799,
     imageCount: 8,
+    enquiryMessage: `Hi! I'm interested in the following saree from your Pushpadhara collection:
+
+*Deep Royal Purple*
+A bloom dipped in royalty, rooted in tradition
+
+Price: ₹1,799
+
+Could you please share more details?`,
   },
   {
     id: "rani-pink",
@@ -68,6 +92,14 @@ export const pushpadharaCollections = [
     ],
     price: 1799,
     imageCount: 5,
+    enquiryMessage: `Hi! I'm interested in the following saree from your Pushpadhara collection:
+
+*Rani Pink*
+Rani pink in full bloom
+
+Price: ₹1,799
+
+Could you please share more details?`,
   },
   {
     id: "rust-brown",
@@ -85,6 +117,14 @@ export const pushpadharaCollections = [
     ],
     price: 1799,
     imageCount: 4,
+    enquiryMessage: `Hi! I'm interested in the following saree from your Pushpadhara collection:
+
+*Rust Brown*
+The colour of earth, patience, and quiet strength
+
+Price: ₹1,799
+
+Could you please share more details?`,
   },
   {
     id: "olive-green",
@@ -102,5 +142,13 @@ export const pushpadharaCollections = [
     ],
     price: 1799,
     imageCount: 6,
+    enquiryMessage: `Hi! I'm interested in the following saree from your Pushpadhara collection:
+
+*Olive Green*
+Inspired by nature, painted with patience
+
+Price: ₹1,799
+
+Could you please share more details?`,
   },
 ];

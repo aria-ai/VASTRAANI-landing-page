@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 /**
  * CraftCard Component
@@ -8,18 +7,16 @@ import { useState } from "react";
  *
  * Single Responsibility: Display and manage expansion of individual craft philosophy card
  */
-const CraftCard = ({ card, index }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
+const CraftCard = ({ card, index, isExpanded, onClick }) => {
   return (
     <motion.div
       className="relative overflow-hidden rounded-lg bg-gradient-to-br from-cream-50 to-cream-100 border border-burgundy-200 hover:border-gold-500 transition-colors duration-300 cursor-pointer"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      transition={{ duration: 0.5, delay: index * 0.05 }}
       whileHover={{ y: -4 }}
-      onClick={() => setIsExpanded(!isExpanded)}
+      onClick={onClick}
     >
       {/* Card Header */}
       <div className="p-6 flex items-start justify-between">

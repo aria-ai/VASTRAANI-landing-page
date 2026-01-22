@@ -2,6 +2,7 @@ import Container from "../layout/Container";
 import Section from "../layout/Section";
 import SocialIcons from "../ui/SocialIcons";
 import { footer, socialLinks } from "../../data/content";
+import { createWhatsAppLink, messageTemplates } from "../../utils/whatsapp";
 
 const Footer = () => {
   return (
@@ -64,7 +65,7 @@ const Footer = () => {
               </a>
 
               <a
-                href={`https://wa.me/${footer.contact.whatsapp}`}
+                href={createWhatsAppLink(messageTemplates.contact)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-cream-100 hover:text-gold-400 transition-colors duration-300 group"
