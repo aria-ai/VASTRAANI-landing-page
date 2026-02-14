@@ -5,6 +5,7 @@ import Features from "../components/sections/Features";
 import About from "../components/sections/About";
 import BrandPhilosophy from "../components/sections/BrandPhilosophy";
 import TheVastraaniWay from "../components/sections/TheVastraaniWay";
+import Bespoke from "../components/sections/Bespoke";
 import Testimonials from "../components/sections/Testimonials";
 import Footer from "../components/sections/Footer";
 
@@ -19,6 +20,7 @@ function Home() {
         <About />
         <BrandPhilosophy />
         <TheVastraaniWay />
+        <Bespoke />
         <Testimonials />
         <Footer />
       </main>

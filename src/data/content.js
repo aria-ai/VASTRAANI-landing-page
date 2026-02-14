@@ -236,8 +236,8 @@ export const footer = {
   copyright: "© 2026 VASTRAANI. ALL RIGHTS RESERVED",
   contact: {
     email: "d.vastraani@gmail.com",
-    phone: "+91-XXXXXXXXXX",
-    whatsapp: "91XXXXXXXXXX",
+    phone: "+91-9423307049",
+    whatsapp: "919423307049",
     location: "Pune, Maharashtra",
   },
   sections: [
@@ -262,6 +262,161 @@ export const footer = {
       links: [
         { name: "Terms & Conditions", href: "/terms" },
         { name: "Privacy Policy", href: "/terms#privacy" },
+      ],
+    },
+  ],
+};
+
+export const bespoke = {
+  heading: "BESPOKE AND CUSTOMIZATION",
+  subheading:
+    "At our brand, we believe every woman deserves an outfit that feels uniquely hers.",
+  description:
+    "We offer customized outfit designing services along with personalized hand-painted sarees crafted specially according to your vision.",
+  whatCanBeCustomized: {
+    title: "What Can Be Customized?",
+    outfits: {
+      title: "For Outfits:",
+      items: [
+        "Fabric selection",
+        "Color palette",
+        "Silhouette & fitting",
+        "Sleeve pattern, neckline, length",
+        "Dupatta style & detailing",
+      ],
+    },
+    sarees: {
+      title: "For Hand-Painted Sarees:",
+      items: [
+        "Change in color combinations of prints",
+        "Custom motifs or themes",
+        "Fabric choice (organza, silk, cotton, etc.)",
+        "Border or pallu detailing modifications",
+        "Personal storytelling elements",
+      ],
+    },
+  },
+  note: "Whether it’s for a wedding, special occasion, or a meaningful gift, we work closely with you to create something truly personal and timeless.",
+  howItWorks: {
+    title: "How It Works:",
+    steps: [
+      "Share your requirements with us.",
+      "We discuss design details and fabric options.",
+      "Design confirmation & advance payment.",
+      "Your customized piece is handcrafted with care.",
+    ],
+  },
+  policy:
+    "Please note: Customized orders require additional processing time and are non-returnable.",
+  contact: {
+    text: "To start your custom order, contact us at:",
+    email: "d.vastraani@gmail.com",
+    phone: "+919423307049",
+  },
+};
+
+export const returnsPolicy = {
+  title: "Returns & Exchange Policy",
+  content: [
+    {
+      subtitle: "General Policy",
+      text: [
+        "At our brand, every piece is thoughtfully designed and carefully handcrafted to ensure premium quality and uniqueness.",
+        "Since most of our outfits are made-to-order, customized, or hand-painted, **we do not accept returns once the order has been processed.**",
+      ],
+    },
+    {
+      subtitle: "Exchange Policy",
+      text: [
+        "We offer exchanges only in the following cases:",
+        "• Size issue (exchange request must be raised within 48 hours of delivery)",
+        "• Product received in damaged condition (unboxing video required)",
+        "• Wrong product received",
+      ],
+    },
+    {
+      subtitle: "Items must be:",
+      text: [
+        "• Unworn and unused",
+        "• In original packaging",
+        "• With all tags intact",
+      ],
+    },
+    {
+      subtitle: "Non-Returnable Items",
+      text: [
+        "• Customized or altered outfits",
+        "• Hand-painted pieces",
+        "• Discounted or sale items",
+        "• International orders",
+      ],
+    },
+    {
+      subtitle: "Refunds",
+      text: [
+        "Refunds (if applicable) will be processed only after the returned product passes quality inspection. Shipping charges are non-refundable.",
+      ],
+    },
+    {
+      subtitle: "Important Note",
+      text: [
+        "Due to lighting and photography, slight color variations may occur. Minor irregularities in hand-painted or handcrafted products are part of the artistry and not considered defects.",
+      ],
+    },
+    {
+      subtitle: "Contact for Returns",
+      text: [
+        "For any return or exchange request, please contact us at:",
+        "📩 d.vastraani@gmail.com within 48 hours of receiving your order.",
+      ],
+    },
+  ],
+};
+
+export const shippingPolicy = {
+  title: "Shipping Information",
+  content: [
+    {
+      subtitle: "Packaging",
+      text: [
+        "We take great care in packaging and delivering your order safely to your doorstep.",
+      ],
+    },
+    {
+      subtitle: "Processing Time",
+      text: [
+        "All our pieces are thoughtfully handcrafted and made-to-order.",
+        "• Processing time: 7–14 working days",
+        "• Customized orders may take 10–21 working days",
+        "You will receive a confirmation once your order is ready to ship.",
+      ],
+    },
+    {
+      subtitle: "Domestic Shipping (Within India)",
+      text: [
+        "• Delivery time: 3–7 working days after dispatch",
+        "• Shipping charges: Calculated at checkout (or Free above ₹5000 at first order)",
+        "Tracking details will be shared via email/WhatsApp once shipped.",
+      ],
+    },
+    {
+      subtitle: "International Shipping",
+      text: [
+        "• Delivery time: 7–15 working days after dispatch",
+        "• Shipping charges vary by location",
+        "• Customs duties (if applicable) must be borne by the customer",
+      ],
+    },
+    {
+      subtitle: "Delays",
+      text: [
+        "While we aim for timely delivery, delays due to courier issues, natural conditions, or unforeseen circumstances are beyond our control.",
+      ],
+    },
+    {
+      subtitle: "Important Note",
+      text: [
+        "Please ensure the shipping address and contact details are accurate. We are not responsible for delays or losses due to incorrect information provided.",
       ],
     },
   ],
