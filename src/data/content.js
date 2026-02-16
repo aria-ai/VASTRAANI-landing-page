@@ -151,7 +151,7 @@ Vastraani is not a brand. It is a feeling — of purity, pride, and personal exp
     "To bring divine-inspired, artistically crafted ethnic wear to modern women who value elegance, culture, and emotion.",
   vision:
     "To redefine Indian ethnic wear through soulful storytelling, responsible craftsmanship, and timeless design.",
-  image: "/collection-1.png",
+  image: "/collection-1.jpg",
 };
 
 export const brandPhilosophy = {
