@@ -1,6 +1,6 @@
 import Header from "../components/sections/Header";
 import Hero from "../components/sections/Hero";
-import Collections from "../components/sections/Collections";
+import CollectionsHub from "../components/sections/CollectionsHub";
 import Features from "../components/sections/Features";
 import About from "../components/sections/About";
 import BrandPhilosophy from "../components/sections/BrandPhilosophy";
@@ -15,7 +15,7 @@ function Home() {
       <Header />
       <main>
         <Hero />
-        <Collections />
+        <CollectionsHub />
         <Features />
         <About />
         <BrandPhilosophy />

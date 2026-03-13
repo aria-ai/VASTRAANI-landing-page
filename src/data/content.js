@@ -1,7 +1,7 @@
 // Vastraani - Real content from client
 // Updated: January 2026
 
-import { pushpadharaCollections } from "./collections";
+import { pushpadharaCollections, jhankaarCollections, jhankaarCollectionInfo, phaguncollections, phaguncollectionInfo } from "./collections";
 
 export const navigation = [
   { name: "HOME", href: "#home" },
@@ -28,6 +28,56 @@ export const collections = {
     "Hand-painted sarees on pure khadi cotton, celebrating colours, traditions, and timeless craftsmanship.",
   items: pushpadharaCollections,
 };
+
+export const jhankaarCollection = {
+  id: "jhankaar",
+  heading: "THE झंकार COLLECTION",
+  tabLabel: "झंकार — Jhankaar",
+  subheading: "When your outfit walks… it sings. ✨",
+  description:
+    "Where elegance doesn't just shine — it sounds beautiful. Maslin suit sets adorned with signature coin lace that creates a graceful music with every step.",
+  items: jhankaarCollections,
+  collectionInfo: jhankaarCollectionInfo,
+};
+
+/**
+ * Master registry — order here controls tab order in CollectionsHub.
+ * To add a new collection: import its data above and push an entry here.
+ */
+export const allCollections = [
+  {
+    id: "pushpadhara",
+    tabLabel: "Pushpadhara",
+    heading: "THE PUSHPADHARA COLLECTION",
+    subheading: "First Bloom — Where every petal tells a story",
+    description:
+      "Hand-painted sarees on pure khadi cotton, celebrating colours, traditions, and timeless craftsmanship.",
+    items: pushpadharaCollections,
+    bottomNote: "Handcrafted on Khadi Cotton",
+  },
+  {
+    id: "jhankaar",
+    tabLabel: "झंकार — Jhankaar",
+    heading: "THE झंकार COLLECTION",
+    subheading: "When your outfit walks… it sings. ✨",
+    description:
+      "Where elegance doesn't just shine — it sounds beautiful. Maslin suit sets adorned with signature coin lace that creates a graceful music with every step.",
+    items: jhankaarCollections,
+    collectionInfo: jhankaarCollectionInfo,
+    bottomNote: "Maslin · Zari Embroidery · Mirror Work · Coin Lace",
+  },
+  {
+    id: "phagun",
+    tabLabel: "Phagun",
+    heading: "THE PHAGUN COLLECTION",
+    subheading: "Woven with festive spirit, worn with grace.",
+    description:
+      "Premium Russian Jacquard suit sets featuring intricate zari weaving and handcrafted detailing — each piece a celebration of festive tradition.",
+    items: phaguncollections,
+    collectionInfo: phaguncollectionInfo,
+    bottomNote: "Russian Jacquard · Zari Weaving · Hand Zardosi",
+  },
+];
 
 export const features = {
   heading: "WHY CHOOSE VASTRAANI?",

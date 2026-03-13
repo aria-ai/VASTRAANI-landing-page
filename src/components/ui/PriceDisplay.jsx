@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
  * PriceDisplay Component
  * Reusable price badge with responsive sizing and animations
  *
- * @param {number} price - Price in rupees
+ * @param {number|null} price - Price in rupees, or null to show "Enquire"
  * @param {string} size - 'sm' | 'md' | 'lg'
  * @param {string} className - Additional CSS classes
  */
@@ -15,11 +15,14 @@ const PriceDisplay = ({ price, size = "md", className = "" }) => {
     lg: "text-xl px-6 py-3",
   };
 
-  const formattedPrice = new Intl.NumberFormat("en-IN", {
-    style: "currency",
-    currency: "INR",
-    maximumFractionDigits: 0,
-  }).format(price);
+  const displayValue =
+    price != null
+      ? new Intl.NumberFormat("en-IN", {
+          style: "currency",
+          currency: "INR",
+          maximumFractionDigits: 0,
+        }).format(price)
+      : "Enquire for Price";
 
   return (
     <motion.div
@@ -34,9 +37,10 @@ const PriceDisplay = ({ price, size = "md", className = "" }) => {
       whileHover={{ scale: 1.1 }}
       transition={{ duration: 0.2 }}
     >
-      {formattedPrice}
+      {displayValue}
     </motion.div>
   );
 };
 
 export default PriceDisplay;
+

@@ -31,6 +31,15 @@
   .smooth-scroll {
     scroll-behavior: smooth;
   }
+
+  /* Hides scrollbar while keeping scroll functionality — used by tab strip */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 /* Custom Scrollbar */

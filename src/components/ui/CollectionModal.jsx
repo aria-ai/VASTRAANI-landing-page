@@ -226,6 +226,7 @@ const CollectionModal = ({
                   images={getCollectionImages(
                     collection.id,
                     collection.imageCount,
+                    collection.collectionName,
                   )}
                   alt={collection.subtitle}
                   initialIndex={initialImageIndex}

@@ -28,7 +28,7 @@ const CollectionCard = ({ collection, onOpen }) => {
     >
       {/* Auto-scrolling carousel */}
       <AutoScrollCarousel
-        images={getCollectionImages(collection.id, collection.imageCount)}
+        images={getCollectionImages(collection.id, collection.imageCount, collection.collectionName)}
         alt={collection.subtitle}
         interval={1000 * (30 / collection.imageCount)}
       />
