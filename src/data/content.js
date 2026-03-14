@@ -1,7 +1,13 @@
 // Vastraani - Real content from client
 // Updated: January 2026
 
-import { pushpadharaCollections, jhankaarCollections, jhankaarCollectionInfo, phaguncollections, phaguncollectionInfo } from "./collections";
+import {
+  pushpadharaCollections,
+  jhankaarCollections,
+  jhankaarCollectionInfo,
+  phaguncollections,
+  phaguncollectionInfo,
+} from "./collections";
 
 export const navigation = [
   { name: "HOME", href: "#home" },
@@ -15,7 +21,7 @@ export const hero = {
   logo: "/vastraani_logo.png",
   subtitle: "From Divinity To Design",
   description:
-    "Where Indian tradition meets modern elegance. Where every fabric breathes a story.",
+    "Wearable art. Indian heritage. Modern elegance. Thoughtfully crafted — where tradition, craftsmanship, and every fabric breathe a story.",
   ctaText: "EXPLORE THE COLLECTION",
   ctaAction: "#collections",
   backgroundImage: "/hero-bg-1.jpg",

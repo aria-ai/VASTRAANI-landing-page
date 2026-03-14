@@ -86,7 +86,8 @@ const Hero = () => {
         </motion.p>
 
         <motion.p
-          className="text-base md:text-lg lg:text-xl text-cream-100 font-sans mb-8 md:mb-12 max-w-2xl mx-auto"
+          className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-cream-100 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed tracking-wide"
+          style={{ fontFamily: "'Lora', serif" }}
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}

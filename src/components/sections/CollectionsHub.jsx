@@ -202,32 +202,31 @@ const CollectionsHub = () => {
   // Swipe state for mobile drag-to-switch
   const dragStartX = useRef(null);
 
-  const goTo = useCallback((idx) => {
-    setActiveIndex((prev) => {
-      if (idx === prev) return prev;
-      setDirection(idx > prev ? 1 : -1);
-      return idx;
-    });
-  }, []);
-
-  const goNext = useCallback(() => {
-    goTo((activeIndex + 1) % allCollections.length);
-  }, [goTo, activeIndex]);
-
-  const goPrev = useCallback(() => {
-    goTo((activeIndex - 1 + allCollections.length) % allCollections.length);
-  }, [goTo, activeIndex]);
+  // goTo: two clean separated state updates — never nest setState inside another setState updater
+  const goTo = (idx) => {
+    if (idx === activeIndex) return;
+    setDirection(idx > activeIndex ? 1 : -1);
+    setActiveIndex(idx);
+  };
 
   // Keyboard left/right within the section
   useEffect(() => {
     const handler = (e) => {
       if (isModalOpen) return;
-      if (e.key === "ArrowRight") goNext();
-      if (e.key === "ArrowLeft") goPrev();
+      if (e.key === "ArrowRight") {
+        const next = (activeIndex + 1) % allCollections.length;
+        setDirection(1);
+        setActiveIndex(next);
+      }
+      if (e.key === "ArrowLeft") {
+        const prev = (activeIndex - 1 + allCollections.length) % allCollections.length;
+        setDirection(-1);
+        setActiveIndex(prev);
+      }
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [isModalOpen, goNext, goPrev]);
+  }, [isModalOpen, activeIndex]);
 
   const handleOpenModal = (collection, startIndex = 0) => {
     setSelectedCollection(collection);
@@ -254,7 +253,15 @@ const CollectionsHub = () => {
     const delta = dragStartX.current - endX;
     dragStartX.current = null;
     if (Math.abs(delta) > 60) {
-      delta > 0 ? goNext() : goPrev();
+      if (delta > 0) {
+        const next = (activeIndex + 1) % allCollections.length;
+        setDirection(1);
+        setActiveIndex(next);
+      } else {
+        const prev = (activeIndex - 1 + allCollections.length) % allCollections.length;
+        setDirection(-1);
+        setActiveIndex(prev);
+      }
     }
   };
 
