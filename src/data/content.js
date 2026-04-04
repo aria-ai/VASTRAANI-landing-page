@@ -7,6 +7,8 @@ import {
   jhankaarCollectionInfo,
   phaguncollections,
   phaguncollectionInfo,
+  dhoopChhaonCollections,
+  dhoopChhaonCollectionInfo,
 } from "./collections";
 
 export const navigation = [
@@ -82,6 +84,17 @@ export const allCollections = [
     items: phaguncollections,
     collectionInfo: phaguncollectionInfo,
     bottomNote: "Russian Jacquard · Zari Weaving · Hand Zardosi",
+  },
+  {
+    id: "dhoop-chhaon",
+    tabLabel: "Dhoop Chhaon ☀️",
+    heading: "DHOOP CHHAON — THE SUMMER WHISPER",
+    subheading: "Where the warmth of the sun meets the soul of shade.",
+    description:
+      "Seven hand-painted Mulmul sarees crafted for the woman on the go — lightweight, breathable, and effortlessly chic in the peak of summer heat.",
+    items: dhoopChhaonCollections,
+    collectionInfo: dhoopChhaonCollectionInfo,
+    bottomNote: "Mul Mulmul Cotton · Hand-Painted · Contrast Lace · Blouse Included",
   },
 ];
 

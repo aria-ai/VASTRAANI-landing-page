@@ -476,3 +476,280 @@ export const phaguncollections = [
       "Hi! I'm interested in the Phagun Offwhite & Pink Elegance Jacquard Set (₹3,499). Could you please share availability and ordering details?",
   },
 ];
+
+
+// ─── Dhoop Chhaon Collection ──────────────────────────────────────────────────
+
+/**
+ * Shared metadata for Dhoop Chhaon — The Summer Whisper
+ */
+export const dhoopChhaonCollectionInfo = {
+  about:
+    "Step into the light of Summer 2026 with Dhoop Chhaon, a collection where the warmth of the sun (Dhoop) meets the soul-soothing comfort of shade (Chhaon). Crafted from the finest Mul Cotton and breathable Khadi, these sarees are designed to keep you cool, calm, and effortlessly chic in the peak of the heat.",
+  story:
+    "Forget the fuss of falls and the struggle of pins — these sarees are made for the woman on the go. You don't carry a Dhoop Chhaon drape; it carries you with a fluid grace that feels like a second skin. Adorned with delicate laces and paired with vibrant contrast blouse pieces, this collection is your ultimate summer sanctuary. Just drape, breathe, and let the fabric do the rest.",
+  fabric: {
+    material: "Mul Mulmul Cotton",
+    work: "Hand-painted artisanal motifs with contrast lace detailing",
+    note: "Lightweight, breathable & skin-soft — perfect for peak summer",
+  },
+  sizes: ["Free size / Standard drape"],
+  care: [
+    "Gentle hand wash in cold water",
+    "Do not wring or bleach",
+    "Dry in shade to preserve hand-painted colours",
+    "Steam iron on low heat",
+  ],
+  returnPolicy: [
+    "Returns/exchanges only for manufacturing defects",
+    "Request must be raised within 48 hours of delivery",
+    "Hand-painted variations are natural and not eligible for return",
+  ],
+  craftDisclaimer:
+    "Each piece is hand-painted — slight variations in motif placement are natural and add to the uniqueness of every drape.",
+};
+
+export const dhoopChhaonCollections = [
+  {
+    id: "dhoop-chhaon-sunset-wine",
+    collectionName: "dhoop-chhaon",
+    title: "The Sunset Wine Mulmul",
+    subtitle: "Sunset Wine",
+    tagline: "Make a bold statement with this rich Wine shade — sun-soaked, hand-painted, and unforgettable.",
+    description:
+      "A rich Wine shade Mulmul Cotton saree featuring a breathtaking fully hand-painted pallu adorned with vibrant yellow, orange, and grey floral designs. Beautifully enhanced with a contrast orange lace and paired with a sophisticated contrast grey blouse piece for a modern, artistic look.",
+    features: [
+      "Wine shade Mulmul Cotton base",
+      "Fully hand-painted pallu — yellow, orange & grey florals",
+      "Contrast orange delicate lace",
+      "Contrast grey blouse piece included",
+    ],
+    perfectFor: ["Evening gatherings", "Sundowner events", "Festive occasions", "Summer weddings"],
+    price: 2700,
+    imageCount: 6,
+    enquiryMessage:
+      "Hi! I'm interested in The Sunset Wine Mulmul from the Dhoop Chhaon collection (₹2,700). Could you please share availability and ordering details?",
+  },
+  {
+    id: "dhoop-chhaon-periwinkle-bloom",
+    collectionName: "dhoop-chhaon",
+    title: "The Periwinkle Bloom Mulmul",
+    subtitle: "Periwinkle Bloom",
+    tagline: "Airy, breathable, and dreamily hand-painted in the softest periwinkle blue.",
+    description:
+      "A Periwinkle Blue Mulmul Cotton saree designed to be lightweight, breathable, and incredibly soft. Features a striking hand-painted floral design in a rich palette of violet, pink, and dark blue, beautifully framed by a contrast dark navy blue delicate lace. Paired with a contrast dark navy blue blouse piece for a sophisticated and cohesive finish.",
+    features: [
+      "Periwinkle Blue Mulmul Cotton base",
+      "Hand-painted florals — violet, pink & dark blue palette",
+      "Contrast dark navy blue delicate lace",
+      "Contrast dark navy blue blouse piece included",
+    ],
+    perfectFor: ["Daytime functions", "Casual festive wear", "Summer brunches", "Garden parties"],
+    price: 2700,
+    imageCount: 6,
+    enquiryMessage:
+      "Hi! I'm interested in The Periwinkle Bloom Mulmul from the Dhoop Chhaon collection (₹2,700). Could you please share availability and ordering details?",
+  },
+  {
+    id: "dhoop-chhaon-lime-zest",
+    collectionName: "dhoop-chhaon",
+    title: "The Lime Zest Mulmul",
+    subtitle: "Lime Zest",
+    tagline: "Fresh, vibrant, and unapologetically alive — the boldest drape of the season.",
+    description:
+      "A Fresh Lime Mulmul Cotton saree that is exceptionally soft, breathable, and gracefully lightweight. Features elegant hand-painted floral motifs in crisp white and blue, beautifully framed by a contrast white delicate GPO lace. Paired with a sophisticated contrast Prussian blue blouse piece for a striking, high-fashion finish.",
+    features: [
+      "Fresh Lime Mulmul Cotton base",
+      "Hand-painted florals — white & blue palette",
+      "Contrast white delicate GPO lace",
+      "Contrast Prussian blue blouse piece included",
+    ],
+    perfectFor: ["High-fashion outings", "Summer weddings", "Festive gatherings", "Photoshoots"],
+    price: 3000,
+    imageCount: 5,
+    enquiryMessage:
+      "Hi! I'm interested in The Lime Zest Mulmul from the Dhoop Chhaon collection (₹3,000). Could you please share availability and ordering details?",
+  },
+  {
+    id: "dhoop-chhaon-musical-lotus",
+    collectionName: "dhoop-chhaon",
+    title: "The Musical Lotus Mulmul",
+    subtitle: "Musical Lotus",
+    tagline: "Where art meets melody — a lotus masterpiece that sings with every step.",
+    description:
+      "A vibrant Pink Mulmul Cotton saree featuring a masterpiece hand-painted big lotus and leaf pattern on the pallu and shoulder area. The highlight is the unique multicolor coin lace that creates a gentle, musical sound with every movement. Completed with a sophisticated contrast dark blue blouse piece — a perfect blend of visual art and sensory delight.",
+    features: [
+      "Vibrant Pink Mulmul Cotton base",
+      "Hand-painted big lotus & leaf pattern on pallu & shoulder",
+      "Unique multicolor coin lace — softly musical with every step",
+      "Contrast dark blue blouse piece included",
+    ],
+    perfectFor: ["Festive celebrations", "Cultural events", "Wedding functions", "Statement occasions"],
+    price: 3500,
+    imageCount: 6,
+    enquiryMessage:
+      "Hi! I'm interested in The Musical Lotus Mulmul from the Dhoop Chhaon collection (₹3,500). Could you please share availability and ordering details?",
+  },
+  {
+    id: "dhoop-chhaon-kiwi-pista",
+    collectionName: "dhoop-chhaon",
+    title: "The Kiwi Pista Mulmul",
+    subtitle: "Kiwi Pista",
+    tagline: "Quirky, fresh, and one-of-a-kind — the most playful drape in the collection.",
+    description:
+      "A quirky and soft Pista Green Mulmul Cotton saree featuring the most unique hand-painted kiwi motifs in a deep olive shade. This lightweight, breathable drape is neatly edged with a contrast olive delicate lace and comes with a matching olive colour blouse piece for a cohesive, nature-inspired look that is both playful and elegant.",
+    features: [
+      "Pista Green Mulmul Cotton base",
+      "Unique hand-painted kiwi motifs in deep olive",
+      "Contrast olive delicate lace",
+      "Matching olive blouse piece included",
+    ],
+    perfectFor: ["Casual outings", "Summer picnics", "Day functions", "Gifting"],
+    price: 2100,
+    imageCount: 4,
+    enquiryMessage:
+      "Hi! I'm interested in The Kiwi Pista Mulmul from the Dhoop Chhaon collection (₹2,100). Could you please share availability and ordering details?",
+  },
+  {
+    id: "dhoop-chhaon-pastel-rose",
+    collectionName: "dhoop-chhaon",
+    title: "The Pastel Rose Mulmul",
+    subtitle: "Pastel Rose",
+    tagline: "Effortless grace in slate grey — romantic pink roses meet a bold black edge.",
+    description:
+      "A Slate Grey Mulmul Cotton saree featuring delicately hand-painted pink roses that add a romantic touch to the neutral base. The lightweight, breathable fabric is beautifully finished with a multicolor pastel soft lace and paired with a bold contrast black blouse piece for a modern, chic aesthetic.",
+    features: [
+      "Slate Grey Mulmul Cotton base",
+      "Hand-painted pink roses — delicate & romantic",
+      "Multicolor pastel soft lace",
+      "Bold contrast black blouse piece included",
+    ],
+    perfectFor: ["Casual festive wear", "Office celebrations", "Day gatherings", "Gifting"],
+    price: 2100,
+    imageCount: 4,
+    enquiryMessage:
+      "Hi! I'm interested in The Pastel Rose Mulmul from the Dhoop Chhaon collection (₹2,100). Could you please share availability and ordering details?",
+  },
+  {
+    id: "dhoop-chhaon-caramel-pearl",
+    collectionName: "dhoop-chhaon",
+    title: "The Caramel Pearl Mulmul",
+    subtitle: "Caramel Pearl",
+    tagline: "Earthy sophistication elevated by 3D GPO flowers and shimmering pearls.",
+    description:
+      "A Soft Caramel (Mocha Brown) Mulmul Cotton saree that is lightweight and exceptionally breathable. Features fresh hand-painted white flowers enhanced with hand-tucked 3D GPO flowers and shimmering pearls at the centre of each motif. Finished with a delicate white lace with a golden touch and paired with a contrast off-white blouse piece — a masterpiece of texture and grace.",
+    features: [
+      "Soft Caramel / Mocha Brown Mulmul Cotton base",
+      "Hand-painted white flowers with 3D GPO flower detailing",
+      "Shimmering pearl centres on each motif",
+      "Delicate white lace with golden touch",
+      "Contrast off-white blouse piece included",
+    ],
+    perfectFor: ["Weddings", "Festive occasions", "Special celebrations", "Evening events"],
+    price: 2700,
+    imageCount: 6,
+    enquiryMessage:
+      "Hi! I'm interested in The Caramel Pearl Mulmul from the Dhoop Chhaon collection (₹2,700). Could you please share availability and ordering details?",
+  },
+  {
+    id: "dhoop-chhaon-citrus-bloom",
+    collectionName: "dhoop-chhaon",
+    title: "The Citrus Bloom Mulmul",
+    subtitle: "Citrus Bloom",
+    tagline: "Bright, breezy, and cheerfully hand-painted — your summer morning in a drape.",
+    description:
+      "A soft and breathable Mulmul Cotton saree in a powder blue base, featuring vibrant hand-painted orange and green floral motifs. The lightweight drape is beautifully framed with a contrast orange delicate lace and paired with a contrast off-white blouse piece for a bright, cheerful finish.",
+    features: [
+      "Powder Blue Mulmul Cotton base",
+      "Hand-painted orange & green floral motifs",
+      "Contrast orange delicate lace",
+      "Contrast off-white blouse piece included",
+    ],
+    perfectFor: ["Summer mornings", "Daytime functions", "Casual festive wear", "Garden parties"],
+    price: 2700,
+    imageCount: 5,
+    enquiryMessage:
+      "Hi! I'm interested in The Citrus Bloom Mulmul from the Dhoop Chhaon collection (₹2,700). Could you please share availability and ordering details?",
+  },
+  {
+    id: "dhoop-chhaon-prussian-tulip",
+    collectionName: "dhoop-chhaon",
+    title: "The Prussian Tulip Mulmul",
+    subtitle: "Prussian Tulip",
+    tagline: "Hand-painted tulips in a dual-tone palette — breathable elegance with a vintage soul.",
+    description:
+      "A Prussian Blue Mulmul Cotton saree featuring hand-painted tulips in a dual-tone palette of white and sky blue. A delicate lace adds a vintage touch to this breathable and graceful drape, paired with a contrast light blue blouse piece for a cohesive, serene finish.",
+    features: [
+      "Prussian Blue Mulmul Cotton base",
+      "Hand-painted tulips — white & sky blue dual-tone palette",
+      "Delicate vintage-touch lace",
+      "Contrast light blue blouse piece included",
+    ],
+    perfectFor: ["Daytime events", "Summer outings", "Casual festive wear", "Gifting"],
+    price: 2100,
+    imageCount: 5,
+    enquiryMessage:
+      "Hi! I'm interested in The Prussian Tulip Mulmul from the Dhoop Chhaon collection (₹2,100). Could you please share availability and ordering details?",
+  },
+  {
+    id: "dhoop-chhaon-pichwai-khadi",
+    collectionName: "dhoop-chhaon",
+    title: "The Pichwai Khadi",
+    subtitle: "Pichwai Khadi",
+    tagline: "Rustic elegance rooted in tradition — Pichwai artistry on hand-spun Khadi.",
+    description:
+      "A Cream-coloured Khadi saree featuring vibrant, hand-painted Pichwai motifs that celebrate traditional artistry. The breathable, hand-spun fabric offers a timeless drape, perfectly complemented by a running blouse piece in the same serene cream shade — a perfect blend of heritage and style for the modern woman.",
+    features: [
+      "Cream hand-spun Khadi base",
+      "Hand-painted Pichwai motifs — vibrant & traditional",
+      "Running blouse piece in matching cream shade",
+    ],
+    perfectFor: ["Cultural events", "Temple occasions", "Heritage celebrations", "Gifting"],
+    price: 2700,
+    imageCount: 4,
+    enquiryMessage:
+      "Hi! I'm interested in The Pichwai Khadi from the Dhoop Chhaon collection (₹2,700). Could you please share availability and ordering details?",
+  },
+  {
+    id: "dhoop-chhaon-lime-tiara",
+    collectionName: "dhoop-chhaon",
+    title: "The Lime Tiara Mulmul",
+    subtitle: "Lime Tiara",
+    tagline: "Parrot green vivacity meets a regal Tiara pallu — art you can drape.",
+    description:
+      "A vibrant Parrot Green ultra-soft Mul Cotton saree featuring stunning hand-painted flowers in shades of blue and white. The pallu is elegantly adorned with a unique Tiara circle pattern floral design, while a contrast blue vintage lace adds a delicate, antique charm. Breathable and graceful, it comes with a matching running blouse piece for a seamless, artistic look.",
+    features: [
+      "Parrot Green ultra-soft Mul Cotton base",
+      "Hand-painted flowers — blue & white palette",
+      "Unique Tiara circle pattern floral design on pallu",
+      "Contrast blue vintage lace",
+      "Matching running blouse piece included",
+    ],
+    perfectFor: ["Festive occasions", "Daytime celebrations", "Summer weddings", "Photoshoots"],
+    price: 2700,
+    imageCount: 6,
+    enquiryMessage:
+      "Hi! I'm interested in The Lime Tiara Mulmul from the Dhoop Chhaon collection (₹2,700). Could you please share availability and ordering details?",
+  },
+  {
+    id: "dhoop-chhaon-forest-sparrow",
+    collectionName: "dhoop-chhaon",
+    title: "The Forest Sparrow Mulmul",
+    subtitle: "Forest Sparrow",
+    tagline: "Nature's morning serenity — sparrows in crisp white on a bottle green canvas.",
+    description:
+      "A Bottle Green Mulmul Cotton saree featuring charming, hand-painted sparrow motifs in crisp white, inspired by nature's morning serenity. The lightweight, breathable drape is edged with a delicate white lace and paired with a contrast off-white blouse piece for a perfectly balanced, vintage-inspired look.",
+    features: [
+      "Bottle Green Mulmul Cotton base",
+      "Hand-painted sparrow motifs in crisp white",
+      "Delicate white lace edging",
+      "Contrast off-white blouse piece included",
+    ],
+    perfectFor: ["Nature lovers", "Casual outings", "Day functions", "Gifting"],
+    price: 2100,
+    imageCount: 5,
+    enquiryMessage:
+      "Hi! I'm interested in The Forest Sparrow Mulmul from the Dhoop Chhaon collection (₹2,100). Could you please share availability and ordering details?",
+  },
+];
+
