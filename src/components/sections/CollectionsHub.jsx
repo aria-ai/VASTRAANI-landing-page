@@ -201,6 +201,7 @@ const CollectionsHub = () => {
 
   // Swipe state for mobile drag-to-switch
   const dragStartX = useRef(null);
+  const dragStartY = useRef(null);
 
   // goTo: two clean separated state updates — never nest setState inside another setState updater
   const goTo = (idx) => {
@@ -243,25 +244,34 @@ const CollectionsHub = () => {
   };
 
   // Touch swipe on the cards area
+  // Only switches collection if the gesture is more horizontal than vertical
+  // (prevents accidental collection change when user is trying to scroll down)
   const handleDragStart = (e) => {
     dragStartX.current = e.touches?.[0]?.clientX ?? e.clientX;
+    dragStartY.current = e.touches?.[0]?.clientY ?? e.clientY;
   };
 
   const handleDragEnd = (e) => {
     if (dragStartX.current === null) return;
     const endX = e.changedTouches?.[0]?.clientX ?? e.clientX;
-    const delta = dragStartX.current - endX;
+    const endY = e.changedTouches?.[0]?.clientY ?? e.clientY;
+    const deltaX = dragStartX.current - endX;
+    const deltaY = dragStartY.current - endY;
     dragStartX.current = null;
-    if (Math.abs(delta) > 60) {
-      if (delta > 0) {
-        const next = (activeIndex + 1) % allCollections.length;
-        setDirection(1);
-        setActiveIndex(next);
-      } else {
-        const prev = (activeIndex - 1 + allCollections.length) % allCollections.length;
-        setDirection(-1);
-        setActiveIndex(prev);
-      }
+    dragStartY.current = null;
+
+    // Must be a clearly horizontal gesture — more sideways than up/down
+    const isHorizontalSwipe = Math.abs(deltaX) > Math.abs(deltaY);
+    if (!isHorizontalSwipe || Math.abs(deltaX) < 60) return;
+
+    if (deltaX > 0) {
+      const next = (activeIndex + 1) % allCollections.length;
+      setDirection(1);
+      setActiveIndex(next);
+    } else {
+      const prev = (activeIndex - 1 + allCollections.length) % allCollections.length;
+      setDirection(-1);
+      setActiveIndex(prev);
     }
   };
 
