@@ -3,7 +3,7 @@
  * Helpers to dynamically generate image paths based on collection structure
  *
  * Folder convention:
- *   /collections/{collectionName}/{variantId}/{1,2,3...}.jpg
+ *   /collections/{collectionName}/{variantId}/{1,2,3...}.webp
  *
  * collectionName examples: "pushpadhara", "jhankaar", "phagun"
  * variantId     examples: "sindoor-red", "jhankaar-royal-plum"
@@ -24,7 +24,7 @@ export const getCollectionImages = (collectionId, imageCount = 3, collectionName
 
   return Array.from(
     { length: imageCount },
-    (_, index) => `${basePath}/${index + 1}.jpg`,
+    (_, index) => `${basePath}/${index + 1}.webp`,
   );
 };
 
@@ -41,6 +41,6 @@ export const getCollectionImage = (collectionId, imageNumber, collectionName = n
     ? `/collections/${collectionName}/${collectionId}`
     : `/collections/${collectionId}`;
 
-  return `${basePath}/${imageNumber}.jpg`;
+  return `${basePath}/${imageNumber}.webp`;
 };
 

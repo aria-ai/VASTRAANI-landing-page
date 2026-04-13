@@ -3,6 +3,7 @@
 
 import {
   pushpadharaCollections,
+  pushpadharaCollectionInfo,
   jhankaarCollections,
   jhankaarCollectionInfo,
   phaguncollections,
@@ -61,6 +62,7 @@ export const allCollections = [
     description:
       "Hand-painted sarees on pure khadi cotton, celebrating colours, traditions, and timeless craftsmanship.",
     items: pushpadharaCollections,
+    collectionInfo: pushpadharaCollectionInfo,
     bottomNote: "Handcrafted on Khadi Cotton",
   },
   {

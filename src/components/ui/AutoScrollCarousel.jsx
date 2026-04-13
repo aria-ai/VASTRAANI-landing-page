@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 
 /**
  * AutoScrollCarousel Component
@@ -15,20 +15,33 @@ const AutoScrollCarousel = ({
   alt = "Collection image",
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef(null);
 
   const nextSlide = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
   }, [images.length]);
 
+  // Only auto-scroll when the card is actually visible on screen
   useEffect(() => {
-    if (images.length <= 1) return;
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.2 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
+  useEffect(() => {
+    if (images.length <= 1 || !isVisible) return;
     const timer = setInterval(nextSlide, interval);
     return () => clearInterval(timer);
-  }, [nextSlide, interval, images.length]);
+  }, [nextSlide, interval, images.length, isVisible]);
 
   return (
-    <div className="relative w-full h-full overflow-hidden bg-burgundy-50">
+    <div ref={containerRef} className="relative w-full h-full overflow-hidden bg-burgundy-50">
       {images.length > 0 ? (
         <>
           <AnimatePresence mode="wait">
@@ -37,6 +50,8 @@ const AutoScrollCarousel = ({
               src={images[currentIndex]}
               alt={`${alt} ${currentIndex + 1}`}
               className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
               initial={{ opacity: 0, scale: 1.05 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}

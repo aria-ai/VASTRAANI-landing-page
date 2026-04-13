@@ -1,6 +1,35 @@
 // Pushpadhara Collection Data
 // 6 hand-painted sarees on khadi cotton
 
+/**
+ * Shared metadata for the Pushpadhara collection
+ */
+export const pushpadharaCollectionInfo = {
+  about:
+    "Pushpadhara — meaning 'wearer of flowers' — is our debut collection celebrating the timeless tradition of hand-painting on Khadi cotton. Each saree is individually crafted, making every piece a one-of-a-kind wearable artwork.",
+  story:
+    "Born from the belief that everyday wear can be extraordinary, Pushpadhara brings together the earthy grace of hand-spun Khadi and the vibrant language of floral hand-painting. A collection for the woman who carries heritage in her stride.",
+  fabric: {
+    material: "Pure Khadi Cotton",
+    work: "Hand-painted floral motifs with vibrant artisanal pigments",
+    note: "Khadi is naturally breathable, gets softer with every wash, and carries the soul of handspun tradition",
+  },
+  sizes: ["Free size / Standard drape"],
+  care: [
+    "Gentle hand wash in cold water",
+    "Do not wring or bleach",
+    "Dry in shade to preserve hand-painted colours",
+    "Steam iron on reverse side on low heat",
+  ],
+  returnPolicy: [
+    "Returns/exchanges only for manufacturing defects",
+    "Request must be raised within 48 hours of delivery",
+    "Hand-painted variations are natural and not eligible for return",
+  ],
+  craftDisclaimer:
+    "Each piece is individually hand-painted — subtle variations in pattern and colour are natural and enhance the uniqueness of every drape.",
+};
+
 export const pushpadharaCollections = [
   {
     id: "sindoor-red",
