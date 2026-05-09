@@ -1,5 +1,6 @@
 import {
   motion,
+  AnimatePresence,
   useScroll,
   useTransform,
   useMotionTemplate,
@@ -7,34 +8,73 @@ import {
 import { useState, useEffect } from "react";
 import Button from "../ui/Button";
 import { hero } from "../../data/content";
+import { homePageImages } from "../../data/homePageImages";
 
+// ─── Config ──────────────────────────────────────────────────────────────────
+const SLIDE_DURATION_MS = 5000;   // how long each image shows
+const FADE_DURATION_S   = 1.8;    // crossfade transition length
+
+// ─── Background Slideshow ────────────────────────────────────────────────────
+const HeroSlideshow = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (homePageImages.length <= 1) return;
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % homePageImages.length);
+    }, SLIDE_DURATION_MS);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="absolute inset-0 z-0">
+      {/* Render all images stacked — only current one is visible */}
+      <AnimatePresence initial={false}>
+        <motion.div
+          key={current}
+          className="absolute inset-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: FADE_DURATION_S, ease: "easeInOut" }}
+        >
+          {/* Subtle Ken Burns scale drift on each slide */}
+          <motion.div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${homePageImages[current]})` }}
+            initial={{ scale: 1.06 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: SLIDE_DURATION_MS / 1000 + FADE_DURATION_S, ease: "linear" }}
+          />
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Gradient overlay — always present, keeps text legible */}
+      <div className="absolute inset-0 bg-gradient-to-b from-burgundy-900/55 via-burgundy-900/35 to-burgundy-900/70 z-10" />
+    </div>
+  );
+};
+
+// ─── Hero ─────────────────────────────────────────────────────────────────────
 const Hero = () => {
   const [scrolled, setScrolled] = useState(false);
   const { scrollY } = useScroll();
 
-  // Transform values for logo animation
-  // Logo moves from center to top-left header position
-  const logoScale = useTransform(scrollY, [0, 200], [1, 0.23]);
+  // Logo moves from centre to top-left header position on scroll
+  const logoScale    = useTransform(scrollY, [0, 200], [1, 0.23]);
   const logoXPercent = useTransform(scrollY, [0, 200], [0, -44]);
   const logoYPercent = useTransform(scrollY, [0, 200], [0, -28]);
-
-  // Use motion template for calc values
-  const logoX = useMotionTemplate`calc(-50% + ${logoXPercent}vw)`;
-  const logoY = useMotionTemplate`calc(-50% + ${logoYPercent}vh)`;
+  const logoX        = useMotionTemplate`calc(-50% + ${logoXPercent}vw)`;
+  const logoY        = useMotionTemplate`calc(-50% + ${logoYPercent}vh)`;
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -42,37 +82,22 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Image with Parallax */}
-      <motion.div
-        className="absolute inset-0 z-0"
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 1.5 }}
-      >
-        <div
-          className="w-full h-full bg-cover bg-center"
-          style={{ backgroundImage: `url(${hero.backgroundImage})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-burgundy-900/60 via-burgundy-900/40 to-burgundy-900/70" />
-      </motion.div>
+      {/* Crossfade background slideshow */}
+      <HeroSlideshow />
 
-      {/* Animated Logo - Transitions from center to header */}
+      {/* Animated Logo — transitions from centre to header on scroll */}
       <motion.img
         src={hero.logo}
         alt="Vastraani"
         className="fixed top-1/3 left-1/2 z-50 h-40 md:h-48 lg:h-64 w-auto pointer-events-none"
-        style={{
-          scale: logoScale,
-          x: logoX,
-          y: logoY,
-        }}
+        style={{ scale: logoScale, x: logoX, y: logoY }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       />
 
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      {/* Content — sits above the slideshow */}
+      <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
         {/* Spacer for logo */}
         <div className="h-40 md:h-48 lg:h-64 mb-6 md:mb-8" />
 
@@ -110,9 +135,9 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
@@ -122,18 +147,9 @@ const Hero = () => {
           transition={{ duration: 1.5, repeat: Infinity }}
           className="text-cream-50"
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </motion.div>
       </motion.div>
