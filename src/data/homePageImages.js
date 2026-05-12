@@ -2,9 +2,9 @@
 // Re-run `npm run images -- public/home_page` after adding new hero photos
 
 export const homePageImages = [
-  "/home_page/20260222_105848.webp",
-  "/home_page/20260222_110205.webp",
-  "/home_page/20260222_124658.webp",
-  "/home_page/20260222_170857.webp",
-  "/home_page/20260222_180011.webp",
+  "/home_page/1.webp",
+  "/home_page/2.webp",
+  "/home_page/3.webp",
+  "/home_page/4.webp",
+  "/home_page/5.webp",
 ];

@@ -82,11 +82,12 @@ while IFS= read -r src; do
   fi
 
   # HEIC → convert to temp JPG first (cwebp doesn't understand HEIC)
+  # sips handles the resize so the temp JPG is already at target size
   if [[ "$ext_lower" == "heic" ]]; then
-    sips -s format jpeg "$src" --out /tmp/_vastraani_input.jpg > /dev/null 2>&1
-    cwebp -q "$QUALITY" -resize "$RESIZE_MAX" 0 /tmp/_vastraani_input.jpg -o "$webp" -quiet
+    sips -s format jpeg --resampleHeightWidthMax "$RESIZE_MAX" "$src" --out /tmp/_vastraani_input.jpg > /dev/null 2>&1
+    cwebp -q "$QUALITY" /tmp/_vastraani_input.jpg -o "$webp" -quiet
   else
-    # JPG and PNG are handled directly by cwebp
+    # JPG and PNG: cwebp handles resize directly (-resize W 0 = scale width, auto height)
     cwebp -q "$QUALITY" -resize "$RESIZE_MAX" 0 "$src" -o "$webp" -quiet
   fi
 
@@ -136,15 +137,15 @@ while IFS= read -r webp; do
     continue
   fi
 
-  # Rotate source to temp JPG
+  # Rotate source to temp JPG — resize during conversion so final WebP stays small
   if [[ "$src_ext_lower" == "heic" ]]; then
-    sips -s format jpeg "$src" --out /tmp/_vastraani_rotated_src.jpg > /dev/null 2>&1
+    sips -s format jpeg --resampleHeightWidthMax "$RESIZE_MAX" "$src" --out /tmp/_vastraani_rotated_src.jpg > /dev/null 2>&1
     sips -r 90 /tmp/_vastraani_rotated_src.jpg --out /tmp/_vastraani_rotated.jpg > /dev/null 2>&1
   else
     sips -r 90 "$src" --out /tmp/_vastraani_rotated.jpg > /dev/null 2>&1
   fi
 
-  cwebp -q "$QUALITY" /tmp/_vastraani_rotated.jpg -o "$webp" -quiet
+  cwebp -q "$QUALITY" -resize "$RESIZE_MAX" 0 /tmp/_vastraani_rotated.jpg -o "$webp" -quiet
   echo "  🔄 Fixed: ${webp#public/}  (${w}×${h} → portrait)"
   fixed=$((fixed + 1))
 
